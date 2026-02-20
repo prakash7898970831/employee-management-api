@@ -186,6 +186,63 @@ public function test_create_employee()
 ```
 
 ---
+### Authentication & Protected APIs
+## 1. Register a New User
+Endpoint: POST /api/v1/register
+Description: Create a new user account.
+Request Body Example:
+```bash
+{
+  "name": "Test",
+  "email": "abc@gmail.com",
+  "password": "123456",
+  "password_confirmation": "123456"
+}
+```
+Response Example:
+{
+  "success": true,
+  "message": "User registered successfully",
+  "data": {
+    "user": {
+      "id": 1,
+      "name": "Test",
+      "email": "abc@gmail.com"
+    }
+  }
+}
 
+## 2. Login / Get Access Token
+Endpoint: POST /api/v1/login
+Description: Login with email and password to obtain an access token.
+Request Body Example:
+```bash
+{
+  "email": "abc@gmail.com",
+  "password": "123456"
+}
+```
+Response Example:
+{
+  "success": true,
+  "token": "YOUR_ACCESS_TOKEN_HERE",
+  "token_type": "Bearer",
+  "expires_in": 3600
+}
+
+## 3. Logout
+```bash
+Endpoint: POST /api/v1/logout
+```
+Description: Logs out the user and revokes the access token.
+Headers:
+Authorization: Bearer YOUR_ACCESS_TOKEN_HERE
+Response Example:
+{
+  "success": true,
+  "message": "Logged out successfully"
+}
+
+------------------
 ## Notes
 * Ensure you have **PHP, Composer, and MySQL** installed.
