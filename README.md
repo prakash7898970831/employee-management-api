@@ -200,6 +200,7 @@ Request Body Example:
 }
 ```
 Response Example:
+```bash
 {
   "success": true,
   "message": "User registered successfully",
@@ -211,6 +212,7 @@ Response Example:
     }
   }
 }
+```
 
 ## 2. Login / Get Access Token
 Endpoint: POST /api/v1/login
@@ -222,14 +224,16 @@ Request Body Example:
   "password": "123456"
 }
 ```
+
 Response Example:
+```bash
 {
   "success": true,
   "token": "YOUR_ACCESS_TOKEN_HERE",
   "token_type": "Bearer",
   "expires_in": 3600
 }
-
+```
 ## 3. Logout
 ```bash
 Endpoint: POST /api/v1/logout
@@ -238,11 +242,12 @@ Description: Logs out the user and revokes the access token.
 Headers:
 Authorization: Bearer YOUR_ACCESS_TOKEN_HERE
 Response Example:
+```bash
 {
   "success": true,
   "message": "Logged out successfully"
 }
-
+```
 ------------------
 ## Notes
 * Ensure you have **PHP, Composer, and MySQL** installed.
