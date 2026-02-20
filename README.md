@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-This project is a REST API built in PHP (Laravel/CodeIgniter) to manage employees and departments.
+This project is a REST API built in PHP (Laravel) to manage employees and departments.
 
 * A company has multiple departments.
 * Each employee belongs to one department and can have multiple contact numbers and addresses.
